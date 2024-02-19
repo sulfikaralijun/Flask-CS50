@@ -6,9 +6,13 @@
 		<title>Document</title>
 	</head>
 	<body>
-		<form method="get">
+		<form action="/greet" method="get">
 			<input autofocus name="name" placeholder="Name" type="text" />
 			<button type="submit">Greet</button>
 		</form>
+
+		<div>
+			{{ name }}
+		</div>
 	</body>
 </html>
