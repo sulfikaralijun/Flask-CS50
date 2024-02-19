@@ -6,4 +6,5 @@ app = Flask(__name__)
 def index():
     if "name" in request.args:
         name = request.args['name']
+    else:
     return render_template('index.html', placeholder=name)
