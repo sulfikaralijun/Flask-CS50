@@ -6,4 +6,6 @@ app = Flask(__name__)
 def indexs():
     if request.method == 'POST':
         name = request.form.get('name', 'Anonym')
+    else:
+        name = request.args.get('name', 'Anonym')
     return render_template('index.html')
