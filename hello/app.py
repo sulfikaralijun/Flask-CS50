@@ -4,5 +4,5 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    if "name"
+    if "name" in 
     return render_template('index.html', placeholder=name)
