@@ -8,12 +8,13 @@
 		name="name"
 		placeholder="Name"
 		type="text"
+    
 	/>
-	<select name="sport">
-		<option value="">Basketball</option>
-		<option value="">Soccer</option>
-		<option value="">Ultimate Frisbee</option>
-	</select>
+	<div>
+    {% for sport in sports %}
+    <input type="checkbox" name="sport" value="{{ sport }}"> {{ sport }}
+  {% endfor %}
+  </div>
 	<button type="submit">Register</button>
 </form>
 
