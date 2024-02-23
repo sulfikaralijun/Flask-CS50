@@ -16,6 +16,7 @@ Session(app)
 
 @app.route("/")
 def index():
+    session.clear()
     books = db.execute("SELECT * FROM books")
     return render_template("books.html", books=books)
 

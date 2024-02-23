@@ -1,7 +1,7 @@
 # Searches for shows using Ajax
 
 from cs50 import SQL
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
 
@@ -20,4 +20,5 @@ def search():
         shows = db.execute("SELECT * FROM shows WHERE title LIKE ? LIMIT 50", "%" + q + "%")
     else:
         shows = []
-    return render_template("search.html", shows=shows)
+    return jsonify(shows)
+    
